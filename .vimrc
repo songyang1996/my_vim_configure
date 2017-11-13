@@ -49,11 +49,6 @@ syntax on
 "显示行号
 set nu
 
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-
 "pydict插件配置
 let Tlist_Auto_Highlight_Tag=1  
 let Tlist_Auto_Open=1  
@@ -76,10 +71,35 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
 autocmd FileType c set omnifunc=ccomplete#Complete  
 let g:pydiction_location='~/.vim/pydiction/complete-dict' 
+
 "补全窗口自动关闭
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
    
+"主题配置
+colorscheme molokai
+set t_Co=256
+
+"nerdtree
+let NERDTreeWinPos='left'
+let NERDTreeWinSize=30
+let NERDTreeIgnore=['\.pyc$', '\~$']
+map <F2> :NERDTreeToggle<CR>
+
+
+"插件
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
+Bundle 'scrooloose/nerdtree'
+"Bundle 'bling/vim-airline'
+Plugin 'mattn/emmet-vim'
+Plugin 'kien/ctrlp.vim'
+
+
+
+
 
 
 

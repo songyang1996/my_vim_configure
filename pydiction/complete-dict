@@ -106087,6 +106087,7 @@ response.object_ref(
 response.obsolete_setter(
 response.text
 response.xml
+response.xpath
 --- from scrapy.http.response import * ---
 --- import scrapy.http.response.html ---
 scrapy.http.response.html.HtmlResponse(
@@ -110253,7 +110254,7 @@ multi.defaultdict(
 multi.errno
 multi.findsig(
 multi.format_opt(
-multi.from_utf8(
+multi.from_utf8
 multi.items(
 multi.main(
 multi.multi_args(
