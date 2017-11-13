@@ -9,4 +9,4 @@
 
 ` cd ~/.vim `
 
-` mv .vimrc ~/.vimrc`
+` mv vimrc ~/.vimrc`
