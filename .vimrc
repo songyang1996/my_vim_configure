@@ -49,32 +49,9 @@ syntax on
 "显示行号
 set nu
 
-"pydict插件配置
-let Tlist_Auto_Highlight_Tag=1  
-let Tlist_Auto_Open=1  
-let Tlist_Auto_Update=1  
-let Tlist_Display_Tag_Scope=1  
-let Tlist_Exit_OnlyWindow=1  
-let Tlist_Enable_Dold_Column=1  
-let Tlist_File_Fold_Auto_Close=1  
-let Tlist_Show_One_File=1  
-let Tlist_Use_Right_Window=1  
-let Tlist_Use_SingleClick=1  
-"nnoremap   :TlistToggle
-   
-filetype plugin on  
-autocmd FileType python set omnifunc=pythoncomplete#Complete  
-autocmd FileType javascrīpt set omnifunc=javascriptcomplete#CompleteJS  
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags  
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS  
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags  
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
-autocmd FileType c set omnifunc=ccomplete#Complete  
-let g:pydiction_location='~/.vim/pydiction/complete-dict' 
-
 "补全窗口自动关闭
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
    
 "主题配置
 colorscheme molokai
@@ -87,15 +64,19 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 map <F2> :NERDTreeToggle<CR>
 
 
+"ycm
+let g:ycm_server_python_interpreter='/usr/local/python2.7/bin'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+
 "插件
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'bling/vim-airline'
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 
 
