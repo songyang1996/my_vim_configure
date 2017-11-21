@@ -8,3 +8,9 @@
 ` git clone git@github.com:songyang1996/my_vim_configure.git`
 
 ` mv .vimrc ~/.vimrc`
+
+## 1.4更新
+####安装了jedi补全，与ycm双管齐下
+####安装了autopep8，避免代码的缩进问题
+
+####转载请注明出处
